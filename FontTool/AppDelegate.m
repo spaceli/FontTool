@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FontListViewController.h"
+
 
 @implementation AppDelegate
 
@@ -16,6 +18,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    FontListViewController *controller = [[FontListViewController alloc] initWithGrouped];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
     return YES;
 }
 
